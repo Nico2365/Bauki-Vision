@@ -1,3 +1,1 @@
-
-// Platzhalter: Der vollständige Canvas-Code wird hier eingesetzt.
-// (Wird ersetzt durch OpenAI automatisch im tatsächlichen Editor)
+// App-Komponente aus Canvas muss hier eingefügt werden
