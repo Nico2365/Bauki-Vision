@@ -54,9 +54,14 @@ export default function App() {
         })
       });
 
-      const data = await response.json();
-      const text = data.choices?.[0]?.message?.content || "Keine Antwort erhalten.";
-      setResult(text);
+     const data = await response.json();
+if (!response.ok) {
+  console.error("Fehler von OpenAI:", data);
+  setResult("❌ Fehler: " + (data.error?.message || "Unbekannter Fehler"));
+} else {
+  const text = data.choices?.[0]?.message?.content || "Keine Antwort erhalten.";
+  setResult(text);
+}
       setLoading(false);
     };
 
